@@ -1,7 +1,7 @@
 [user]
 	name = Morgan Joyce
 	email = morganj2k@gmail.com
-    signingkey = 02429D0B50D1A57A  # Your GPG key for signing commits, if applicable
+    signingkey = 02429D0B50D1A57A # fingerprint
 
 [core]
     editor = code --wait  # Sets Visual Studio Code as the default editor
