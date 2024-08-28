@@ -1,0 +1,66 @@
+[user]
+	name = Morgan Joyce
+	email = morganj2k@gmail.com
+    signingkey = 02429D0B50D1A57A  # Your GPG key for signing commits, if applicable
+
+[core]
+    editor = code --wait  # Sets Visual Studio Code as the default editor
+    excludesfile = C:\\Users\\atxte\\.gitignore_global
+    autocrlf = input  # Handle line endings (use `true` for Windows, `input` for Unix/Mac)
+    filemode = false  # Useful if working across different OS (e.g., Windows/Linux)
+    sshCommand = "ssh -i ~/.ssh/id_ed25519_personal"  # Specify the SSH key to use
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    cm = commit
+    lg = log --oneline --graph --all
+    amend = commit --amend --no-edit
+    last = log -1 HEAD
+    recent = log --since='1 week ago' --oneline --graph --all
+
+[push]
+    default = simple  # Ensures you're pushing only the current branch to its upstream counterpart
+
+[pull]
+    rebase = true  # Use rebase instead of merge when pulling
+
+[diff]
+    tool = code  # Set VS Code as diff tool
+    renames = copies  # Show file renames in diffs
+
+[merge]
+    tool = code  # Set VS Code as merge tool
+    conflictstyle = diff3  # Show base during conflicts
+
+[credential]
+    helper = manager-core  # Windows; use `osxkeychain` for Mac, `libsecret` for Linux
+
+[log]
+    decorate = full  # Show refs (branches/tags) in `git log`
+
+[commit]
+    gpgSign = true  # because unsigned commits are like untyped variables—dangerous!
+
+[color]
+    ui = auto  # Enable color in all Git commands that output to the terminal
+    branch = auto
+    diff = auto
+    status = auto
+
+[rebase]
+    autoStash = true  # Automatically stash changes before rebasing
+
+[status]
+    showUntrackedFiles = all  # Show untracked files in status
+
+[url "github-personal:"]
+    insteadOf = https://github.com/
+    insteadOf = git@github.com:
+
+[url "github-work:"]
+    insteadOf = git@github.com-work:
+
+[gpg]
+	program = C:/Program Files (x86)/GnuPG/bin/gpg.exe
